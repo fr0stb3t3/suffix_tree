@@ -63,7 +63,13 @@ class VisualNode{
                 //check if parentNode is not the first Node in the grid row
                 if (this.parentNode.leftSibling !== null){
                     
-                    let parentNodeSibling = this.parentNode.leftSibling;
+
+                    let parentNodeLeftSibling = this.parentNode.leftSibling;
+                    let lastChildOf_ParentNodes_LeftSibling = parentNodeLeftSibling.getLastChild() 
+                    if (lastChildOf_ParentNodes_LeftSibling !== null){
+                        lastChildOf_ParentNodes_LeftSibling.rightSibling = this
+                        this.leftSibling = lastChildOf_ParentNodes_LeftSibling;
+                    }
 
                 }
                 
