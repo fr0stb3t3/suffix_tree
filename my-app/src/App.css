@@ -1,0 +1,44 @@
+
+.App {
+  text-align: center;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+.graphScreen{
+  margin-top: 100px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.treeNode{
+  /* margin: auto; */
+  /* margin-top: 100px; */
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  background-color: green;
+
+  position: absolute;
+  
+  z-index: 2 ;
+}
+
+.edge {
+  width: 5px;
+  height: 200px;
+
+  background-color: black;
+
+  position: absolute;
+  z-index: 1;
+  transform-origin: top center;
+  transform: rotateZ(60deg);
+  
+
+}
